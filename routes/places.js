@@ -1,7 +1,8 @@
 import express from "express";
-import { getAllPlaces } from "../controllers/placesController.js";
+import { getAllPlaces, getPlaceById } from "../controllers/placesController.js";
 const placesRouter = express.Router();
 
-placesRouter.get("/", getAllPlaces);
+placesRouter.get("/api/places", getAllPlaces);
+placesRouter.get("/api/places/:id", getPlaceById);
 
 export default placesRouter;
